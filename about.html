@@ -1,55 +1,218 @@
 <?php include 'header.html'; ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Planet - About Us</title>
+    <title>Endalkachew Lebeta | One Planet Multimedia</title>
+    <meta name="description" content="Official website of Endalkachew Lebeta, founder of One Planet Multimedia, showcasing award-winning films, music, and creative storytelling in Ethiopia.">
+    <meta name="keywords" content="Endalkachew Lebeta, One Planet Multimedia, Ethiopian films, multimedia production, music, storytelling">
+    <meta name="author" content="Endalkachew Lebeta">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Endalkachew Lebeta",
+          "url": "https://oneplanetmultimedia.com",
+          "sameAs": [
+            "https://www.facebook.com/yourprofile",
+            "https://www.instagram.com/yourprofile",
+            "https://www.linkedin.com/in/yourprofile"
+            "https://www.youtube.com/channel/UC1TX81PTmWMTlB1lBDhLkbA"
+          ],
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "One Planet Multimedia"
+          }
+        }
+        </script>
+        <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+        
     <link rel="stylesheet" href="style.css">
 </head>
 <header class="header">
-    <div class="logo">
-        <img src="Images/logo.png" alt="One Planet Logo" width="50">
+    <div class="header-content">
+      <div class="logo">
+        <img src="Images/One planet.png" alt="One Planet Logo" width="50" />
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </div>
+  
     <nav>
-        <!-- Mobile Menu Icon -->
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    
-    <ul id="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-submenu">
+          <a href="about.html" id="about-link">About</a>
+          <ul class="submenu">
+            <li><a href="about.html#history"><em>Our History</em></a></li>
+            <li><a href="about.html#our-team"><em>Our Team</em></a></li>
+            <li><a href="about.html#values"><em>Our Values</em></a></li>
+          </ul>
+        </li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </nav>
-</header>
-<body class="about">
-    <div class="content">
-    <section class=" about-section">
-        <h2>Founders</h2>
-        <div class="about-container">
-            <div class="card">
-                <a href="www.linkedin.com/in/mahder-abrha-mekonnen-485238245" target="_blank">
-                    <img src="Images/Picture1.jpg" alt="Mahder Abrha">
-                </a>
-                <p>Mahder Abrha</p>
-            </div>
+  </header>
 
-    <h2>📩 Get in Touch</h2>
-   <p> Are you looking for an award-winning team to bring your vision to life? Let’s create something extraordinary together.</p>
-<ul>📍 Location: [Your Studio Address]</ul> 
-<ul>📧 Email: contact@oneplanetproductions.com</ul>
-<ul>📞 Phone: +251924132164</ul></div>  
-<h3>[Follow Us on Social Media] </h3> 
-<p>📸 Instagram | 🎥 YouTube | 🐦 Twitter | </p> </div>
+<body class="about"> 
+    <div class="content">  
+        
+    <section class=" about-section">
+        <div class="welcome-section">
+            <div class="container about-container">
+                <div class="about-content">
+                    <div class="about-blog">
+                      <h2 id="history">Our History</h2>                 
+                        <div class="text-card">
+                          <p>
+                            <strong>ONE PLANET ENTERTAINMENT</strong> was founded in 2015 by Endalkachew Lebeta — an accomplished actor, producer, and martial artist with an inspiring journey rooted in discipline, creativity, and passion.
+
+                            Endalkachew’s story begins in Dire Dawa, where he began practicing Shotokan Karate at the age of seven. His dedication to the art led him to achieve the prestigious rank of 5th Dan, and he went on to represent Ethiopia in numerous international karate competitions. His martial arts career also expanded into kickboxing, where he rose to the rank of Chief Master — a testament to his commitment, skill, and leadership in the sport.
+                            
+                            While mastering the discipline of martial arts, Endalkachew’s creative spirit found a new calling in the world of entertainment. Blending the precision and perseverance honed through years of training, he stepped into the film industry as both a producer and actor. His unique vision and drive led to the founding of ONE PLANET ENTERTAINMENT — a multimedia production company born from the desire to tell powerful, culturally resonant Ethiopian stories.
+                            
+                            Since its establishment, the company has played a pivotal role in shaping modern Ethiopian cinema. With over five full-length films to its name and a number of celebrated projects, ONE PLANET ENTERTAINMENT quickly earned recognition for its compelling narratives, rich cinematography, and emotionally engaging productions.
+                            
+                            Among its proudest achievements is the production of an award-winning short film that marked a turning point for the company. The film’s success brought national attention and solidified ONE PLANET ENTERTAINMENT’s reputation as a creative force in the industry.
+                            
+                            Today, the company continues to thrive — working with both established icons and emerging talents to produce stories that honor Ethiopian heritage while pushing artistic boundaries. At the heart of it all remains Endalkachew Lebeta’s original mission: to create art that entertains, inspires, and elevates the voice of a nation.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 id="our-team"> Our Team</h2>
+        <div class="about-container">
+            <!-- Team Member 1 -->
+            <section id="mash-bio">
+                <h2>Endalkachew Lebeta (Mash) <br> Founder & Producer </h2>
+              
+                <div class="timeline-container">
+                  <!-- 1. Introduction -->
+                  <div class="timeline-block">
+                    <div class="text-content">
+                      <h3>The Visionary</h3>
+                      <p>Born in Dire Dawa, Ethiopia, <strong>Endalkachew Lebeta (Mash)</strong> emerged as a cinematic pioneer with a soul deeply rooted in storytelling. As the founder of <strong>One Planet Entertainment</strong>, he has spent over a decade producing films that echo across the nation’s heart and beyond.</p>
+                    </div>
+                    <img src="Images/Mash.jpg" alt="Mash Portrait">
+                  </div>
+              
+                  <!-- 2. Shotokan Karate Mastery -->
+                  <div class="timeline-block">
+                    <div class="text-content">
+                      <h3>The Martial Artist</h3>
+                      <p>With unmatched discipline, Mash earned his <strong>5th Dan Black Belt in Shotokan Karate</strong>, awarded with a prestigious diploma from Ethiopian Karate Federation. His martial arts philosophy mirrors his approach to filmmaking—focused, graceful, and fiercely passionate.</p>
+                    </div>
+                    <img src="Images/Mash-Karate.jpg" alt="Mash receiving Karate diploma">
+                  </div>
+              
+                  <!-- 3. Kickboxing Champion -->
+                  <div class="timeline-block">
+                    <div class="text-content">
+                      <h3>The Fighter</h3>
+                      <p>He is also a certified kickboxing chief, competing on global stages including Ireland and the <strong>World Karate Championships</strong>. His commitment to excellence is both artistic and athletic.</p>
+                    </div>
+                    <img src="Images/Mash-Grandmaster.jpg" alt="Mash with Grand Master">
+                  </div>
+                  
+              
+                  <!-- 5. Artistic Leadership -->
+                  <div class="timeline-block">
+                    <div class="text-content full">
+                      <h3>The Producer</h3>
+                      <p>Whether directing a film or leading his team, Mash blends strength, soul, and story. His life is a powerful harmony of cinema and martial arts—a tribute to creative mastery and disciplined living.</p>
+                    </div>
+                    <img src="Images/film festival.jpg" alt="Mash with Grand Master">
+                  </div>
+                </div>
+              </section>
+              
+          
+            <!-- Team Member 2 --> 
+            <section id="girum-bio">
+              <h2> Girum Ermiyas <br> Director</h2>
+            
+              <div class="timeline-container">
+                <!-- 1. Introduction -->
+                <div class="timeline-block">
+                  <div class="text-content">
+                    
+                    <p><strong>Girum Ermiyas</strong>, one of Ethiopia’s most celebrated actors and directors, has inspired generations through his powerful presence on screen and stage. His artistic journey is not just a career—it’s a movement of cultural revival and national pride.</p>
+                  </div>
+                  <img src="Images/Girum.jpg" alt="Girum Ermiyas Portrait">
+              </div>
+              </div>
+            </section>
+          </div>
+          <h2 id="values">🌍 Our Values</h2>
+          <div class="video-text-section">
+            <div class="value-card">
+              
+              
+              <div class="value-point">
+                <span class="icon">🎨</span>
+                <p>
+                  At <strong>ONE PLANET ENTERTAINMENT</strong>, we believe in <strong>creative freedom</strong>, <strong>cultural authenticity</strong>, and <strong>impactful storytelling</strong>.
+                </p>
+              </div>
+            
+              <div class="value-point">
+                <span class="icon">🎬</span>
+                <p>
+                  With over <strong>10 years</strong> in the multimedia industry, we’ve built a <strong>trusted production team</strong> that has worked with some of Ethiopia’s most celebrated artists.
+                </p>
+              </div>
+            
+              <div class="value-point">
+                <span class="icon">🔥</span>
+                <p>
+                  Our team is committed to creating art that entertains, educates, and inspires — blending <strong>tradition</strong> with <strong>modern media</strong> to amplify voices that matter.
+                </p>
+              </div>
+            </div>
+            <div class="video-screen">
+              <h3>🎬 Behind every scene is a story </h3>
+              <video controls autoplay muted loop>
+                <source src="./videos/mashvid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <p class="video-caption">our passionate team pouring heart and soul into every frame, capturing raw emotion, real moments, and the magic that brings our productions to life.</p>
+            </div>
+          </div>
+          </div>
+</section>
+</div>
+    <footer>
+        <p>&copy; 2025 One Planet Multimedia. All rights reserved.</p>
+    </footer>
     <script>
         function toggleMenu() {
-            var navLinks = document.getElementById("nav-links");
-            navLinks.classList.toggle("show");
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
         }
+        document.addEventListener("DOMContentLoaded", () => {
+            //
+           // const aboutLink = document.getElementById("about-link");
+            //const submenu = document.querySelector(".submenu");
+    
+            //aboutLink?.addEventListener("click", (event) => {
+               // if (window.innerWidth <= 768) {
+                //    event.preventDefault();
+                //    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                //}
+           // });
+    
+           document.addEventListener("click", (event) => {
+        const navLinks = document.getElementById('nav-links');
+        if (!event.target.closest(".has-submenu")) {
+            const submenu = document.querySelector(".submenu");
+            if (submenu) submenu.style.display = "none";
+        }
+    });
+        });
     </script>
-    <footer>
-        <p>&copy; 2025 One Planet. All rights reserved.</p>
-    </footer>
+        
 </body>
 </html>

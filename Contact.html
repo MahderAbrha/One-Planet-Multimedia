@@ -1,65 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Planet - Contact Us</title>
+    <title>Endalkachew Lebeta | One Planet Multimedia</title>
+    <meta name="description" content="Official website of Endalkachew Lebeta, founder of One Planet Multimedia, showcasing award-winning films, music, and creative storytelling in Ethiopia.">
+    <meta name="keywords" content="Endalkachew Lebeta, One Planet Multimedia, Ethiopian films, multimedia production, music, storytelling">
+    <meta name="author" content="Endalkachew Lebeta">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Endalkachew Lebeta",
+          "url": "https://oneplanetmultimedia.com",
+          "sameAs": [
+            "https://www.facebook.com/yourprofile",
+            "https://www.instagram.com/yourprofile",
+            "https://www.linkedin.com/in/yourprofile"
+          ],
+          "jobTitle": "Founder",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "One Planet Multimedia"
+          }
+        }
+        </script>
+        <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+        
     <link rel="stylesheet" href="style.css">
 </head>
 <header class="header">
-    <div class="logo">
-        <img src="Images/logo.png" alt="One Planet Logo" width="50">
+    <div class="header-content">
+      <div class="logo">
+        <img src="Images/One planet.png" alt="One Planet Logo" width="50" />
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </div>
+  
     <nav>
-        <!-- Mobile Menu Icon -->
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    
-    <ul id="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-submenu">
+          <a href="about.html" id="about-link">About</a>
+          <ul class="submenu">
+            <li><a href="about.html#history"><em>Our History</em></a></li>
+            <li><a href="about.html#our-team"><em>Our Team</em></a></li>
+            <li><a href="about.html#values"><em>Our Values</em></a></li>
+          </ul>
+        </li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
+
 <body class="contact">
     <div class="content">
-    <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form action="submit-form.php" method="post">
-            <table>
-                <tr>
-                    <td><label for="name">Full Name:</label></td>
-                    <td><input type="text" id="name" name="name" required></td>
-                </tr>
-                <tr>
-                    <td><label for="email">Email:</label></td>
-                    <td><input type="email" id="email" name="email" required></td>
-                </tr>
-                <tr>
-                    <td><label for="phone">Phone:</label></td>
-                    <td><input type="tel" id="phone" name="phone"></td>
-                </tr>
-                <tr>
-                    <td><label for="message">Message:</label></td>
-                    <td><textarea id="message" name="message" rows="4" required></textarea></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button type="submit">Send Message</button></td>
-                </tr>
-            </table>
-        </form>
-    </div>
-    
+        <div="welcome-section">
+        <div class="contact-form">
+            <h2>Submit Inquiry</h2>
+            <form action="https://formspree.io/f/xeoapwno" method="POST">
+                <table>
+                  <tr>
+                      <td><label for="name">Full Name:</label></td>
+                      <td><input type="text" id="name" name="name" required></td>
+                  </tr>
+                  <tr>
+                      <td><label for="email">Email:</label></td>
+                      <td><input type="email" id="email" name="email" required></td>
+                  </tr>
+                  <tr>
+                      <td><label for="phone">Phone:</label></td>
+                      <td><input type="tel" id="phone" name="phone"></td>
+                  </tr>
+                  <tr>
+                      <td><label for="message">Message:</label></td>
+                      <td><textarea id="message" name="message" rows="4" required></textarea></td>
+                  </tr>
+                  <tr>
+                      <td colspan="2">
+                          <button type="submit">Send Message</button>
+                      </td>
+                  </tr>
+                </table>
+              </form>
+              
         </div>
+</div>
+        </div>
+            
+         <footer>
+            <p>&copy; 2025 One Planet Multimedia. All rights reserved.</p>
+        </footer>
         <script>
             function toggleMenu() {
-                var navLinks = document.getElementById("nav-links");
-                navLinks.classList.toggle("show");
+                const navLinks = document.getElementById('nav-links');
+                navLinks.classList.toggle('show');
             }
+            document.addEventListener("DOMContentLoaded", () => {
+                //
+               // const aboutLink = document.getElementById("about-link");
+                //const submenu = document.querySelector(".submenu");
+        
+                //aboutLink?.addEventListener("click", (event) => {
+                   // if (window.innerWidth <= 768) {
+                    //    event.preventDefault();
+                    //    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+                    //}
+               // });
+        
+               document.addEventListener("click", (event) => {
+            const navLinks = document.getElementById('nav-links');
+            if (!event.target.closest(".has-submenu")) {
+                const submenu = document.querySelector(".submenu");
+                if (submenu) submenu.style.display = "none";
+            }
+        });
+            });
+            window.addEventListener("DOMContentLoaded", function () {
+              const form = document.querySelector("form");
+              form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                fetch(form.action, {
+                  method: "POST",
+                  body: formData,
+                  headers: {
+                    Accept: "application/json",
+                  },
+                })
+                  .then((response) => {
+                    if (response.ok) {
+                      alert("Thank you! Your message has been sent.");
+                      form.reset();
+                    } else {
+                      alert("Oops! Something went wrong.");
+                    }
+                  });
+              });
+            });
         </script>
-    <footer>
-        <p>&copy; 2025 One Planet. All rights reserved.</p>
-    </footer>
-</body>
+        
+          
+        
+   </body>
 </html>

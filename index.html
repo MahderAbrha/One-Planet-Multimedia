@@ -1,43 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Planet - Home</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Endalkachew Lebeta | One Planet Multimedia</title>
+        <meta name="description" content="Official website of Endalkachew Lebeta, founder of One Planet Multimedia, showcasing award-winning films, music, and creative storytelling in Ethiopia.">
+        <meta name="keywords" content="Endalkachew Lebeta, One Planet Multimedia, Ethiopian films, multimedia production, music, storytelling">
+        <meta name="author" content="Endalkachew Lebeta">
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Endalkachew Lebeta",
+              "url": "https://oneplanetmultimedia.com",
+              "sameAs": [
+                "https://www.facebook.com/share/16ZYubhuJZ/?mibextid=wwXIfr",
+                "https://www.youtube.com/@OnePlanetMultimedia",
+                "https://www.linkedin.com/in/one-planet-multimedia-61924935b"
+              ],
+              "jobTitle": "Founder",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "One Planet Multimedia"
+              }
+            }
+            </script>
+            <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+            
+        <link rel="stylesheet" href="style.css">
+    </head>
+
 <header class="header">
-    
-    <div class="logo">
-        <img src="Images/logo.png" alt="One Planet Logo" width="50">
+    <div class="header-content">
+      <div class="logo">
+        <img src="Images/One planet.png" alt="One Planet Logo" width="50" />
+      </div>
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </div>
+  
     <nav>
-        <!-- Mobile Menu Icon -->
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <ul id="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="movies.html">Movies</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-submenu">
+          <a href="about.html" id="about-link">About</a>
+          <ul class="submenu">
+            <li><a href="about.html#history"><em>Our History</em></a></li>
+            <li><a href="about.html#our-team"><em>Our Team</em></a></li>
+            <li><a href="about.html#values"><em>Our Values</em></a></li>
+          </ul>
+        </li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
+
 <body class="home">
-    <div class="content">
-        <div class="welcome-section">
-            <h2>Welcome to One Planet</h2>
-            <p>We aim to make the world a better place through innovation and sustainability.</p>
-        </div>
-   
+    <div class="welcome-section">
+    <div class="content">      
+            <div class="video-background">
+                <video autoplay loop muted playsinline>
+                    <source src="Videos/one planet.MP4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div> 
+                                <section class="home" id="home">
+                                    <h2>Welcome to One Planet Multimedia:</h2>
+                                    <p class="motto">Where Infinite Stories Are Born.</p>
+                                   <a href="portfolio.html" class="btn">See Our Work</a> 
+         
+                                </section>
+    <section class="about-us" id="about">
+        <h2>ABOUT</h2>
+        <p>
+    <strong>One Planet Multimedia</strong> is a creative company based in Ethiopia with a unique approach to storytelling. 
+            We specialize in crafting unforgettable experiences through various media platforms, including:
+        In addition to our media production services, we proudly collaborate with talented Ethiopian artists 
+        to organize concerts across America and Europe countries.
+    </p>
+        <ul class="services-list">
+            <li>
+            <img src="Images/film.jpg" alt="Film">
+         <strong>Films</strong>
+        </li>
+            <li>
+                <img src="Images/clip.jpg" alt="music"> 
+                <strong>Music Clips</strong>
+            </li>
+            <li>
+            <img src="Images/featured movie.jpg" alt="movie">
+             <strong>Featured Movies</strong>
+            </li>
+            <li>
+            <img src="Images/short.png"alt="Short Film"> 
+            <strong>Short Films</strong>
+        </li>
+        </ul>
+    
+        <a href="about.html" class="btn">Learn More</a> 
+    </section>
+
+
+    <!-- Services Section -->
+    
+    <h2>Entertainment Services</h2>
+    
+        <div class="services-container">
+            <section class="services" id="services">
+            <div class="service">
+                <div class="service-image" style="background-image: url('Images/The\ shoemaker.jpg');">          
+<h3>Short films</h3></div>
+<div class="service-content">
+    <h3 class="blog-title"> Featured short movies production</h3>
+<p>We produce short movies that are eye catching to audiences and tour all over the world participated film festival all over the world and has won awards also work with known creative artists to make it to life.</p>
+            </div>
     </div>
-    <script>
-        function toggleMenu() {
-            var navLinks = document.getElementById("nav-links");
-            navLinks.classList.toggle("show");
-        }
-    </script>
+            <div class="service">
+                <div class="service-image" style="background-image: url('Images/movie1.jpg');"> <h3>Featured movies</h3></div> 
+                <div class="service-content">
+<h3 class="blog-title"> Film Production Services Worldwide </h3>
+                <p> We produce high-quality films that entertain, inform, and inspire audiences worldwide. 
+                    Our productions are crafted with precision and creativity to deliver impactful stories.</p>
+        </div>
+        </div>
+            <div class="service">
+                <div class="service-image" style="background-image: url('Images/clip.jpg');">
+                     <h3>Music clips</h3>
+                    </div>
+                     <div class="service-content">  
+                <h3 class="blog-title"> Music Video Clip Production</h3>
+                    <p>Creative direction and top-notch production for music videos that stand out in the industry.</p>
+              </div>
+            </div>
+    
+            <div class="service">
+                <div class="service-image" style="background-image: url('Images/concert.jpg');">
+                    <h3>Live Concerts & Events</h3>
+                </div>
+                    <div class="service-content">
+                    <h3 class="blog-title"> Organizing Events and Concerts</h3>
+                     <p>Capturing the energy of live performances and delivering it to your audience in the highest quality.</p>
+                </div>
+            </div>
+        </section>
+</div>
+
+<div class="text-card">
+    <h2>- Sister Company -</h2>
+    <div class="content-wrapper">
+        <img src="Images/Speed.png" alt="Sister Company" class="sister-Company"/>
+        <p>
+            <strong>Speed Ride,</strong> a ride-hailing company based in Addis Ababa, Ethiopia, aims to revolutionize transportation in East Africa with plans to expand to the DMV area in the U.S.
+        </p>
+    </div>
+</div>
+                
+</div>
+</div>
+
+    
    <footer>
-    <p>&copy; 2025 One Planet Film Production. All rights reserved.</p>
+    <div class="media">
+    <h2>Interested in working with us?</h2>
+   <h3> 📩 Get in Touch  </h3>
+<ul>📍 Location: Bole,Addis Ababa.</ul> 
+<ul>📧 Email: sales@oneplanetmultimedia.com</ul>
+<ul>📞 Phone: +251924132164</ul>
+<a href="contact.html" class="btn">Contact Us</a> 
+<div class="follow-us">
+    <h3>Follow Us</h3> 
+    <p>
+        <a href="https://www.youtube.com/@OnePlanetMultimedia"><img src="Images/yt.png" alt="youtube"></a>
+        <a href="https://www.linkedin.com/in/one-planet-multimedia-61924935b"><img src="Images/linkdn.png" alt="linkedin"></a>
+        <a href="https://www.facebook.com/share/16ZYubhuJZ/?mibextid=wwXIfr"><img src="Images/fb.jpg" alt="facebook"></a>
+        
+    </p>
+</div>
+       </div>
+       <hr>
+    <p>&copy; 2025 One Planet Multimedia. All rights reserved.</p>
 </footer>
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('show');
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+        //
+       // const aboutLink = document.getElementById("about-link");
+        //const submenu = document.querySelector(".submenu");
+
+        //aboutLink?.addEventListener("click", (event) => {
+           // if (window.innerWidth <= 768) {
+            //    event.preventDefault();
+            //    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+            //}
+       // });
+
+       document.addEventListener("click", (event) => {
+    const navLinks = document.getElementById('nav-links');
+    if (!event.target.closest(".has-submenu")) {
+        const submenu = document.querySelector(".submenu");
+        if (submenu) submenu.style.display = "none";
+    }
+});
+    });
+</script>
+
 </body>
 </html>
