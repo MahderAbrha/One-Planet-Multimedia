@@ -58,7 +58,7 @@ body {
   .logo img {
     z-index:1002;
     height: 50px;
-    width: aut0; /* Ensures aspect ratio is maintained */
+    width: auto; /* Ensures aspect ratio is maintained */
     border-radius: 0;
     object-fit: contain;
   }
@@ -504,8 +504,8 @@ video {
             font-size: 30px;
             cursor: pointer;
             color: white;
-            
             padding:10px;
+
         }
         
         .menu-icon:hover {
@@ -713,7 +713,7 @@ p a:hover {
     }
 
     .service {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .service-image {
