@@ -26,7 +26,7 @@ body {
 
 .video-background video {
     width: 100%; 
-    min-height: 100vh;
+    height: 100vh;
     object-fit: cover; /* Ensures video scales properly */
 }
 
@@ -45,10 +45,23 @@ body {
 }
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Push logo left, menu icon right */
     align-items: center;
-    width: 100%;
-}
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    z-index:1002;
+    height: 50px;
+    width: aut0; /* Ensures aspect ratio is maintained */
+    border-radius: 0;
+    object-fit: contain;
+  }
 .nav-active {
     display: flex;
     flex-direction:row;
@@ -63,13 +76,8 @@ body {
 .nav-hidden {
     top: -80px;
 }
-.logo img {
-    z-index:1002;
-    height: 50px; /* Adjust size as needed */
-    width: 100%;  /* Maintain original aspect ratio */
-    border-radius: 0; /* Removes rounded corners */
-    object-fit: contain; /* Ensures the image fits naturally */
-}
+
+
 nav ul {
     display: flex;
     gap: 20px;
@@ -137,9 +145,9 @@ nav ul li {
 }
 .content {
     position: relative;
-    flex:1;
     z-index: 1; /* Ensures content appears above the video */
     text-align: center;
+    padding: 80px 20px 20px;
     padding-top: 50px;
     box-sizing: border-box;
     min-height: calc(100vh - 50px);
@@ -147,8 +155,10 @@ nav ul li {
     right:0;
     top:0;
     flex-wrap: wrap;
-    text-align: center;
     justify-content:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .video-container {
     display: flex;        /* Enables Flexbox for side-by-side layout */
@@ -198,12 +208,14 @@ video {
 }
 
 .welcome-section {
-    display:fixed;
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
-    text-align: center;
     gap:30px;
-    justify-content:center;
     margin-top:30px;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
 }
 .welcome-section h2 {
     letter-spacing: 4px;
@@ -255,30 +267,31 @@ video {
         background-color: black; /* Dark background for elegance */
         color: #fff;
         text-align: center;
-        padding: 50px 20px;
+        padding: 30px 20px;
         border-radius: 12px;
-    margin: 110px 60px; /* Space from other sections */
+    margin: 80px 60px; /* Space from other sections */
     z-index: 1;
     position:relative; 
-    width: 80%; /* Full viewport width */
+    width: 100%; /* Full viewport width */
     height:auto;
+    max-width: 1000px;
 }
 .about-us h2 {
     font-size: 2rem;
-    color: #4891fefd; /* Yellow for a warm, inviting feel */
+    color: #4891fefd;  /* Yellow for a warm, inviting feel */
     margin-top: 20px; /* Remove top margin */
     padding-top: 0; /* Ensure no extra space at the top */
     position: absolute; /* Align h2 to start at the top */
     top: 0; /* Pin the heading at the top */
     left: 0; /* Align text to the left for structure */
-    width: 100%; 
+    width: 80%; 
     margin-bottom:20px;
-    padding: 15px 0; /* Add some inner padding for spacing */
+    padding: 12px 30px; /* Add some inner padding for spacing */
     border-top-left-radius: 12px; /* Rounded corners */
     border-top-right-radius: 12px;
     align-items: center;
     z-index: 1;
-    margin-left: 50px;
+    margin-left: 80px;
 }
 .about-us h2::after {
     content: "";
@@ -295,14 +308,15 @@ video {
 }
 .about-us p {
     color:#f0f0f0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     margin: 100px 30px 30px; /* Ensures text appears below the fixed h2 */
     max-width:100%;
     text-align:justify;
     margin-bottom:0px;
     align-items: center;
-    margin-left: 90px;
+    margin-left: 50px;
+   
 }
 .about-us p strong{
     text-align: justify;
@@ -312,7 +326,7 @@ video {
     margin-bottom:0;
 }
 .about-us .btn {
-    background-color: #541cfc; /* Gold CTA for attention */
+    background-color: #4891fefd; /* Gold CTA for attention */
     color: #000;
     padding: 12px 30px;
     border: none;
@@ -323,8 +337,7 @@ video {
     transition: background 0.3s ease, transform 0.3s ease;
     z-index: 1;
     display: inline-block; /* Ensures button behaves as a standalone element */
-    margin-top: 50px;
-    margin-left: 100px;
+    margin-top: 100px;
 }
 
 .about-us .btn:hover {
@@ -382,13 +395,13 @@ video {
     align-items: center;
     width: 100%; /* Full width */
     height: 100%;
-    margin: 100px 10px;
+    margin: 80px 10px;
     gap:60px;
     
 } 
 
 .service-image {
-    background-image: inherit;
+    background-image: inherit; 
     width: 50%;
     height: 500px;
     background-size: cover;
@@ -414,7 +427,7 @@ video {
 
 .service-content {
     width: 50%; /* Full width */
-    padding: 30px;
+    padding: 20px;
     display: flex;
     align-items: flex-start;
     text-align: left;
@@ -491,7 +504,7 @@ video {
             font-size: 30px;
             cursor: pointer;
             color: white;
-            margin-left: auto;
+            
             padding:10px;
         }
         
@@ -666,10 +679,7 @@ p a:hover {
     .menu-icon {
         display: block;
     }
-    nav {
-        width:0%;
-    }
-
+   
     #nav-links {
         display: none;
         flex-direction: column;
@@ -680,11 +690,12 @@ p a:hover {
         width: 25%;
         padding: 20px;
     }
-
+.logo img{
+    display:block;
+}
     #nav-links.show {
         display: flex;
     }
-
     .submenu {
         position: static;
         background-color: #222;
@@ -695,8 +706,105 @@ p a:hover {
         padding-left: 20px;
         display: block;
       }
-}
+      .about-us p,
+    .text-card p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
 
+    .service {
+        max-width: 90%;
+    }
+
+    .service-image {
+        height: 180px;
+    }
+
+    .home h2 {
+        font-size: 1.8rem;
+    }
+
+    .motto {
+        font-size: 1.4rem;
+        margin-top: 80px;
+    }
+}
+@media (max-width: 768px) {
+    .timeline-block {
+      flex-direction: column !important;
+    }
+  
+    .timeline-block img {
+      max-width: 100%;
+    }
+  
+    #mash-bio h2 {
+      font-size: 2rem;
+    }
+    .welcome-section {
+        flex-direction: column;
+        text-align:center;
+        flex-wrap: wrap;
+      }
+  .welcome-section h2{
+   color: #4891fefd;
+   }
+      .certificate-gallery {
+          justify-content: center;
+        }
+      
+        .movie-card {
+          max-width: 100%;
+        }
+      .slider-track img {
+          height: 120px;
+        }
+        .custom-layout {
+          flex-direction: column;
+          text-align: center;
+          flex-wrap: wrap;
+        }
+      
+        .text-side, .video-screen {
+          max-width: 100%;
+        }
+      
+        .movie-title {
+          font-size: 2rem;
+        }
+      
+        .movie-desc {
+          font-size: 1rem;
+        }
+        .movie-container {
+          justify-content: center; /* Center the cards on mobile */
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+      .team-member {
+        max-width: 100%;
+      }
+    
+      .text-card {
+        padding: 20px;
+      }
+    
+      #our-team {
+        font-size: 2rem;
+        padding:20px;
+      }
+      .video-text-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+      }
+    
+      .video-screen {
+        width: 100%;
+        max-width: none;
+        height: auto;
+      }
+  }
 .movie-container, .about-container {
     display: flex;
     justify-content: center;
@@ -887,74 +995,12 @@ p {
   }
   
   /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .timeline-block {
-      flex-direction: column !important;
-    }
-  
-    .timeline-block img {
-      max-width: 100%;
-    }
-  
-    #mash-bio h2 {
-      font-size: 2rem;
-    }
-    .welcome-section {
-        flex-direction: column;
-        text-align:center;
-        flex-wrap: wrap;
-      }
-  
-      .certificate-gallery {
-          justify-content: center;
-        }
-      
-        .movie-card {
-          max-width: 100%;
-        }
-      .slider-track img {
-          height: 120px;
-        }
-        .custom-layout {
-          flex-direction: column;
-          text-align: center;
-          flex-wrap: wrap;
-        }
-      
-        .text-side, .video-screen {
-          max-width: 100%;
-        }
-      
-        .movie-title {
-          font-size: 2rem;
-        }
-      
-        .movie-desc {
-          font-size: 1rem;
-        }
-        .movie-container {
-          justify-content: center; /* Center the cards on mobile */
-          flex-wrap: wrap;
-          justify-content: center;
-      }
-      .team-member {
-        max-width: 100%;
-      }
-    
-      .text-card {
-        padding: 20px;
-      }
-    
-      #our-team {
-        font-size: 2rem;
-        padding:20px;
-      }
-  }
+
   
   /* Description Box */
   /* Container holding both video and text */
   .video-text-section {
-    display: flex;
+    display: fixed;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -969,7 +1015,7 @@ p {
     flex: 1 1 500px;
     background: linear-gradient(to bottom right, rgba(116, 115, 115, 0.482), beige);
     border-left: 6px solid white;
-    padding: 40px 30px;
+    padding: 40px 40px;
     border-radius: 20px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     font-family: 'Segoe UI', sans-serif;
@@ -1027,12 +1073,13 @@ p {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(to bottom right, rgba(116, 115, 115, 0.482), beige);
-    padding: 20px;
+    padding: 40px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     z-index: 1;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 25%;
   }
   .video-screen:hover {
     transform: translateY(-5px);
@@ -1060,23 +1107,26 @@ p {
   /* Text card styling as requested */
   .text-card {
     flex: 1 1 500px;
-    max-width: 1300px;
     background-color: beige;
     border-left: 5px solid #222;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    margin-left: 40px;
+    margin-left: 0px;
     margin-top: 0px;
     justify-content: center;
     align-items: center;
     height:100%;
+    width:100%;
+    max-width: 1300px;
+    text-align: center;
+
   }
  
   .text-card p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: black; /* lighter color for contrast against black background */
-    line-height: 1.8;
+    line-height: 1.6;
     height:100%;
   }
   
@@ -1217,8 +1267,10 @@ p {
   .movie-scroll-wrapper {
     position: relative;
     width: 90%;
-    max-width: 800px;
+    max-width: 100%;
     margin: auto;
+    flex-direction: wrap;
+    justify-content: center;
     overflow: hidden;
 }
 
