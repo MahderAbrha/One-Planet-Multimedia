@@ -228,6 +228,7 @@ video {
     animation: fadeInDown 1.5s ease-in-out; /* Smooth text entrance */
     margin-bottom: 30px;
     
+    
 }
 .welcome-section p {
     font-size: 1.2rem;
@@ -1298,7 +1299,7 @@ p {
     display:flex;
     margin-top: 40px;
     justify-content: center;
-    margin: 40px 0;
+    margin: 40px 60px;
     gap: 20px;
   }
   
@@ -1321,7 +1322,7 @@ p {
     width: 90%;
     max-width: 800px;
     margin: auto;
-    flex-wrap: wrap;
+   margin-top:250px;
     overflow: hidden;
 }
 
