@@ -29,7 +29,9 @@
     display: flex;
     align-items: center;
   }
-  
+  .nav{
+    width:100%;
+  }
   .logo img {
     z-index:1002;
     max-width: 100%;
@@ -392,12 +394,14 @@ video {
 }
 
 .service {
-    display:flex; 
+  display: flex;
+  flex-direction: row;
     overflow: hidden;
     box-shadow: 0 4px 15px blue;
     transition: transform 0.3s ease;
     align-items: center; /* Full width */
-    flex-direction: row;
+    justify-content: center;
+        text-align: center;
     margin: 20px 0;
     flex-wrap: wrap;
     gap:60px;
@@ -439,7 +443,7 @@ video {
     align-items: flex-start;
     text-align: left;
     flex-direction: column;
-    justify-content: center;
+    
 }
 
 .service-content p {
@@ -481,7 +485,7 @@ video {
 }  
 
 .service:nth-child(even) {
-    flex-direction: row-reverse; /* Alternating layout for variety */
+  flex-direction: row-reverse !important; /* Alternating layout for variety */
 }
 
     /* White background + Black text */
@@ -523,7 +527,6 @@ video {
             cursor: pointer;
             color: white; 
             padding:10px;
-            
         }
         
         .menu-icon:hover {
@@ -536,6 +539,17 @@ video {
         .services-container {
             grid-template-columns: repeat(2, 1fr); /* Displays 2 services per row */
         }
+       
+          .movie-section {
+            flex-direction: row;
+          }
+        
+          .text-side,
+          .video-screen {
+            width: 50%;
+            max-width: 50%;
+          }
+        
     }
  
         @media (max-width: 480px) {
@@ -694,12 +708,29 @@ p a:hover {
     
 }
 @media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-    nav {
-        width:0%;
-    }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This aligns the menu icon to the right */
+    padding: 10px 20px;
+    background-color: #000; /* adjust as needed */
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    height: 60px ;
+
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    margin-left: auto;
+    z-index: 1001;
+    margin-right: 0px;
+  }
+
     #nav-links {
         display: none;
         flex-direction: column;
@@ -710,8 +741,15 @@ p a:hover {
         width: 25%;
         padding: 20px;
     }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 .logo img{
     height:60px;
+      max-width: 100%;
+      object-fit: contain;
+      margin-left: 0px;
 }
     #nav-links.show {
         display: flex;
@@ -726,228 +764,268 @@ p a:hover {
         padding-left: 20px;
         display: block;
       }
-      
-    
-}
-@media (max-width: 768px) {
-    .menu-icon {
-      display: block;
-      font-size: 30px;
-      cursor: pointer;
-      color: white;
-      margin-left: auto;
-    }
-  
-    .header-content {
-      padding: 5px 10px;
-    }
-  
-    .home h2 {
-      font-size: 1.8rem;
-    }
-  
-    .motto {
-      font-size: 1.4rem;
-      margin-top: 80px;
-      width:100%;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-    }
-  
-    .about-us {
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      max-width: 100%;
-      margin: auto;
-    }
-    .about-us h2{
-        margin-left: 40px;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .about-us h2::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: #fff;
-      margin: 20px auto;
-     
-  
-    }
-  
-    .about-us p,
-    .text-card p {
-      font-size: 1rem;
-      padding: 0 10px;
-      width: 100%;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .service {
-      max-width: 100%;
-      width:100%;
-      flex-wrap: wrap;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      
-    }
-  .services-list{
-    flex-wrap: wrap;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-.services-content{
-    padding: 20px;
-    max-width: 100%;
-    width:100%;
-    display: flex;           /* Align image and text side by side */
-    align-items: center; 
-   
-}
-.services-content p{
-   height:100vh;
-    width:100%;
-}
-.services-content h3{
-    height:100vh;
-     width:100%;
- }
-    .service-image {
-      height: 100vh;
-      width:100%;
-    }
-  
-    .timeline-block {
-      flex-direction: column !important;
-    }
-  
-    .timeline-block img {
-      max-width: 100%;
-    }
-  
-    #mash-bio h2 {
-      font-size: 2rem;
-    }
-  
-    .custom-layout,
-    .welcome-section {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      margin: auto;
-    }
-    .services{
-width:100%;
-    }
-    .certificate-gallery {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      padding: 10px;
-      width: 100%;
-      margin: 20px auto;
-      flex-direction: row;
-     
-      
-    }
-    .certificate-gallery img {
-        width: 100%; /* Make images take up most of the width */
-        height: auto; /* Allow height to adjust naturally */
-        flex-wrap: wrap;
-      }
-    .movie-card {
-      max-width: 90%;
-    }
-  
-    .slider-track img {
-      height: 120px;
-    }
-  .text-side{
-    width:100%;
-text-align: center;
-align-items: center;
-flex-wrap: wrap;
-  }
-    .text-side,
-    .video-screen {
-      width: 100%;
-      max-width: 100%;
-      padding: 10px;
-    }
-  
-    .movie-title {
-      font-size: 2rem;
-    }
-  
-    .movie-desc {
-      font-size: 1rem;
-    }
-  
-    .movie-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  
-    .team-member {
-      max-width: 100%;
-    }
-  
-    .text-card {
-      padding: 20px;
-      max-width: 100%;
-      width:100vw;
-    }
-  
-    #our-team {
-      font-size: 2rem;
-      padding: 20px;
-    }
-  
-    .video-text-section {
-      flex-wrap: wrap;
-      max-width: 100%;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-    .video-screen{
-        max-width: 100%;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    .video-screen video {
-        width: 100%;
-        max-width: 100%;
-    }
-    .content {
-        padding: 20px 10px;
-        width: 100%;
-      }
-      .services-container{
-        display:flex;
+      .header-content {
+        padding: 5px 10px;
         width:100%;
         max-width: 100%;
+        position:absolute;
+      }
+    
+      .home h2 {
+        font-size: 1.8rem;
+      }
+    
+      .motto {
+        font-size: 1.4rem;
+        margin-top: 80px;
+        width:100%;
+        flex-direction: column;
+        text-align: center;
         align-items: center;
         justify-content: center;
+      }
+    
+      .about-us {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin: auto;
+      }
+      .about-us h2{
+          margin-left: 40px;
+        flex-direction: column;
         text-align: center;
-       }
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .about-us h2::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        margin: 20px auto;
+       
+    
+      }
+    
+      .about-us p,
+      .text-card p {
+        font-size: 1rem;
+        padding: 0 10px;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+      .text-card{
+        flex-wrap: wrap;
+        width:100%;
+        max-width: 100%;
+        height:auto;
+        align-items: center;
+        justify-content: center;
+      }
+      .service {
+        max-width: 100%;
+        width:100%;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+      }
+    .services-list{
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  .services-content{
+      padding: 20px;
+      max-width: 100%;
+      width:100%;
+      display: flex;           /* Align image and text side by side */
+      align-items: center; 
+     
   }
+  .services-content p{
+     height:100vh;
+      width:100%;
+  }
+  .services-content h3{
+      height:100vh;
+       width:100%;
+   }
+      .service-image {
+        height: 100vh;
+        width:100%;
+      }
+    
+      .timeline-block {
+        flex-direction: column !important;
+        margin-top: auto;
+       
+      }
+    .text-content{
+      gap:0px;
+    }
+      .timeline-block img {
+        max-width: 100%;
+      }
+    
+    
+      #mash-bio h2 {
+        font-size: 2rem;
+      }
+    
+      .custom-layout,
+      .welcome-section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+      }
+      .services{
+  width:100%;
+      }
+      
+      .movie-card {
+        max-width: 90%;
+      }
+    
+      .slider-track img {
+        height: 120px;
+      }
+    
+      
+    
+      .movie-desc {
+        font-size: 1rem;
+      }
+    
+      .movie-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    
+      .team-member {
+        max-width: 100%;
+      }
+    
+      .text-card {
+        padding: 20px;
+        max-width: 100%;
+        width:100vw;
+      }
+    
+      #our-team {
+        font-size: 2rem;
+        padding: 20px;
+      }
+    
+      .video-text-section {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        padding: 10px;
+      }
+    
+      .value-card,
+      .video-screen {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .movie-section {
+        display: flex;              /* Make sure it's a flex container */
+        flex-direction: column;     /* Stack vertically on small screens */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 60px;
+        box-sizing: border-box; 
+        max-width: 100%;
+        margin: auto;
+        height: auto;
+           /* Important for layout calculations */
+      }
+        .movie-scroll-wrapper {
+          margin-top: 60px; /* Reduce top margin on small screens */
+        }
+        .text-side,
+.video-screen {
+  width: 100vw;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;              /* Add this */
+  flex-direction: column;     /* Stack content vertically inside */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+
+}
+
+/* Certificate gallery layout */
+.certificate-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.certificate-gallery img {
+  width: 100%;
+  max-width: 300px;   /* Adjust as needed for mobile */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Video responsiveness */
+.video-screen video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Optional: tighter caption for smaller screens */
+.video-caption {
+  font-size: 0.95rem;
+  padding: 5px;
+  text-align: center;
+}
+     
+      
+      .content {
+          padding: 20px 10px;
+          width: 100%;
+        }
+        .services-container{
+          display:flex;
+          width:100%;
+          max-width: 100%;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+         }
+}
+
   
 .movie-container, .about-container {
     display: flex;
@@ -1255,7 +1333,9 @@ p {
     width:100%;
     justify-content: center;
   }
-  
+  .movie-section {
+    margin-top: 0px;            /* Avoid collapsing margin if both have top margins */
+  }
  
   /* Responsive Design */
 
@@ -1273,8 +1353,9 @@ p {
   /* Left Side Text Styling */
   .text-side {
     flex: 1;
-    max-width: 50%;
+    max-width: 100%;
     height: 100vh;
+    margin-bottom: 20px;
   }
   
   .text-side h2 {
@@ -1303,7 +1384,7 @@ p {
   /* Right Side Video */
   .video-screen {
     flex: 1;
-    max-width: 50%;
+    max-width: 100%;
   }
   
   .video-screen video {
@@ -1365,7 +1446,7 @@ p {
     text-align: center;
     font-size: 1.05rem;
     color: #ccc;
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto 20px;
     line-height: 1.6;
   }
@@ -1392,12 +1473,12 @@ p {
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
   }
   .movie-scroll-wrapper {
-    position: relative;
-    width: 90%;
-    max-width: 800px;
-    margin: auto;
-   margin-top:250px;
-    overflow: hidden;
+    position: relative;         /* Make sure it's not fixed */
+  z-index: 1;                 /* Lower priority than other overlapping items */
+  margin-bottom: 40px;        /* Add spacing below */
+  margin-top: 60px;           /* Already present */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .movie-scroll-container {
@@ -1501,7 +1582,8 @@ p {
     color: white; /* White text for contrast */
     padding: 40px;
     border-radius: 12px;
-    max-width: 600px;
+    max-width: 100%;
+    width:100%;
     margin: 20px auto; /* Centers the form and provides space on top and bottom */
     box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); /* Adds a soft glow effect */
 }
@@ -1515,6 +1597,7 @@ p {
 .contact-form table {
     width: 100%;
     margin-bottom: 20px;
+    max-width:100%;
 }
 
 .contact-form td {
@@ -1566,7 +1649,8 @@ p {
     }
 
     .contact-form table {
-        width: 100%; /* Ensures the table takes full width */
+        width: 100%;
+         /* Ensures the table takes full width */
     }
 
     .contact-form td {
