@@ -136,9 +136,9 @@ body {
     z-index: 1;
     text-align: center;
     padding: 40px 20px 20px;
-    box-sizing: border-box;
     min-height: calc(100vh - 50px);
     max-width: 100%;
+    width:100%;
     margin: 0 auto;  /* centers the content */
     display: flex;
     flex-direction: column;
@@ -146,6 +146,8 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     overflow-x: hidden; /* prevent horizontal scroll */
+    box-sizing: border-box;
+    left:0;
 }
 
 .video-background {
@@ -219,6 +221,7 @@ video {
     padding: 20px;
     align-items: center;
     box-sizing: border-box;
+    left:0;
 }
 .welcome-section h2 {
     letter-spacing: 4px;
@@ -229,8 +232,6 @@ video {
     text-shadow: 0 5px 15px white(255, 215, 0, 0.9); /* Glowing text */
     animation: fadeInDown 1.5s ease-in-out; /* Smooth text entrance */
     margin-bottom: 30px;
-    
-    
 }
 .welcome-section p {
     font-size: 1.2rem;
@@ -242,6 +243,7 @@ video {
 }
 .home {
     align-items: center;
+    left:0;
 }
 .home h2{
     letter-spacing: 4px;
@@ -279,7 +281,7 @@ video {
     width: 100%; /* Full viewport width */
     height:auto;
     max-width: 1000px;
-    
+    left:0;
 }
 .about-us h2 {
     font-size: 2rem;
@@ -401,10 +403,11 @@ video {
     transition: transform 0.3s ease;
     align-items: center; /* Full width */
     justify-content: center;
-        text-align: center;
+    text-align: center;
     margin: 20px 0;
     flex-wrap: wrap;
     gap:60px;
+    left:0;
 } 
 .services {
     width: 100%;
@@ -535,7 +538,7 @@ video {
             transform: scale(1.1);
         }
     /* Media query for two items per row on wider screens */
-    @media  (min-width: 768px) {
+@media  (min-width: 768px) {
         .services-container {
             grid-template-columns: repeat(2, 1fr); /* Displays 2 services per row */
         }
@@ -546,35 +549,35 @@ video {
         
           .text-side,
           .video-screen {
-            width: 50%;
-            max-width: 50%;
+            width: 100%;
+           
           }
         
     }
  
-        @media (max-width: 480px) {
+@media (max-width: 480px) {
             .sister-Company {
                 width: 20%;  /* Bigger size for very small screens */
                 max-width: 120px;
                 margin-bottom: 10px;
             }
-.about-section {
+            .about-section {
     padding: 30px 40px;
     text-align: center;
     background-color:black;
     margin-top: 0;
     z-index:1;
-}
-.about-container {
+            }
+            .about-container {
     display: flex;
     justify-content: center; /* Centers cards horizontally */
     gap: 100px; /* Adds space between cards */
     flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
     padding: 50px; /* Adds padding around the container */
     
-}
+             }
 
-.about-container .card {
+            .about-container .card {
     background: black; /* Dark background for contrast */
     padding: 20px;
     gap:30px;
@@ -584,53 +587,53 @@ video {
     width: 300px; /* Sets a fixed width for the cards */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
     justify-content: space-between;
-}
+             }
 
-.about-container .card img {
+            .about-container .card img {
     width: 150px;
     height: 150px; /* Ensures square shape */
     border-radius: 50%; /* Makes the image circular */
     border: 4px solid #FFD700; /* Gold border for a premium feel */
     object-fit: cover; /* Ensures the image scales correctly without distortion */
     transition: transform 0.3s ease; /* Smooth image zoom on hover */
-}
+             }
 
-.about-container .card:hover {
+            .about-container .card:hover {
     transform: scale(1.05); /* Slight zoom effect on hover */
     box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5); /* Enhanced shadow on hover */
     cursor: pointer; /* Shows pointer cursor */
-}
+             }       
 
-.about-container .card h4 {
+             .about-container .card h4 {
     font-weight: bold;
     color: #FFD700; /* Gold color for the name */
     font-size: 1.3rem;
     margin: 10px 0 5px; /* Space between name and position */
-}
+             }
 
-.about-container .card p {
+            .about-container .card p {
     font-size: 1rem;
     font-weight: normal;
     color: whitesmoke; /* White text for contrast */
     margin-bottom: 15px;
-}
+             }
 
-.about-container .card .position {
+             .about-container .card .position {
     font-size: 0.9rem;
     color: #bbb; /* Light gray color for position */
     font-style: italic;
-}
-p a {
-    color:rgba;        /* Changes link text to yellow */
-    text-decoration: none; /* Optional: Removes underline */
-    font-weight: bold;     /* Optional: Makes the text bolder */
-    padding:20px;
-}
+              }
+             p a {
+              color: #FFD700;         /* Changes link text to yellow */
+              text-decoration: none; /* Optional: Removes underline */
+              font-weight: bold;     /* Optional: Makes the text bolder */
+              padding:20px;
+               }
 
-p a:hover {
+             p a:hover {
     color: blue;       /* Optional: Slightly brighter yellow on hover */
     text-decoration: underline; /* Adds underline on hover for better UX */
-}
+               }
 @media (max-width: 768px) {
      
         .menu-icon {
@@ -755,11 +758,13 @@ p a:hover {
         display: flex;
     }
     .submenu {
-        position: static;
-        background-color: #222;
-        padding: 20px;
-        margin: 0px;
-    }
+      display: none; /* Hidden by default */
+      background-color: #222;
+      padding: 10px 0;
+  }
+  .submenu.visible {
+    display: block; /* Show submenu when toggled */
+}
     .submenu li a {
         padding-left: 20px;
         display: block;
@@ -807,8 +812,6 @@ p a:hover {
         height: 2px;
         background-color: #fff;
         margin: 20px auto;
-       
-    
       }
     
       .about-us p,
@@ -835,7 +838,10 @@ p a:hover {
         text-align: center;
         align-items: center;
         justify-content: center;
-        
+        flex-direction: column;
+      }
+      .service:nth-child(even) {
+        flex-direction: column-reverse;
       }
     .services-list{
       flex-wrap: wrap;
@@ -852,15 +858,18 @@ p a:hover {
      
   }
   .services-content p{
-     height:100vh;
+    height: auto;
+max-height: 100vh;
       width:100%;
   }
   .services-content h3{
-      height:100vh;
+    height: auto;
+    max-height: 100vh;
        width:100%;
    }
       .service-image {
-        height: 100vh;
+        height: auto;
+max-height: 100vh;
         width:100%;
       }
     
@@ -875,12 +884,9 @@ p a:hover {
       .timeline-block img {
         max-width: 100%;
       }
-    
-    
       #mash-bio h2 {
         font-size: 2rem;
       }
-    
       .custom-layout,
       .welcome-section {
         display: flex;
@@ -894,17 +900,23 @@ p a:hover {
       .services{
   width:100%;
       }
-      
       .movie-card {
-        max-width: 90%;
+        max-width: 80vw;
+        width: 100%;
       }
-    
+      .movie-scroll-wrapper {
+        padding: 10px 5px;
+        gap: 8px;
+        flex-direction: column;
+        margin-top: 60px; /* Reduce top margin on small screens */
+      }
+      .movie-scroll-wrapper .scroll-btn {
+        font-size: 20px;
+        padding: 8px;
+      }
       .slider-track img {
         height: 120px;
       }
-    
-      
-    
       .movie-desc {
         font-size: 1rem;
       }
@@ -956,11 +968,9 @@ p a:hover {
         max-width: 100%;
         margin: auto;
         height: auto;
-           /* Important for layout calculations */
+        /* Important for layout calculations */
       }
-        .movie-scroll-wrapper {
-          margin-top: 60px; /* Reduce top margin on small screens */
-        }
+      
         .text-side,
 .video-screen {
   width: 100vw;
@@ -972,13 +982,12 @@ p a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: auto;
-
+  margin:auto;
 }
 
 /* Certificate gallery layout */
-.certificate-gallery {
-  display: flex;
+.certificate-gallery{
+display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -989,14 +998,12 @@ p a:hover {
   max-width: 100%;
   box-sizing: border-box;
 }
-
 .certificate-gallery img {
   width: 100%;
   max-width: 300px;   /* Adjust as needed for mobile */
   height: auto;
   object-fit: cover;
 }
-
 /* Video responsiveness */
 .video-screen video {
   width: 100%;
@@ -1010,7 +1017,7 @@ p a:hover {
   padding: 5px;
   text-align: center;
 }
-     
+
       
       .content {
           padding: 20px 10px;
@@ -1025,8 +1032,6 @@ p a:hover {
           text-align: center;
          }
 }
-
-  
 .movie-container, .about-container {
     display: flex;
     justify-content: center;
@@ -1062,18 +1067,19 @@ p a:hover {
 
 
 .content-wrapper {
-    display: flex;           /* Align image and text side by side */
-    align-items: center;     /* Center items vertically */
+  flex-direction: column;
+    text-align:  center;     /* Center items vertically */
     gap: 20px;               /* Adds spacing between image and text */
 }
 
 .sister-Company {
-    width: 30%;            /* Fixed size for consistency */
-    height: 300px;           
+    width: 80%;            /* Fixed size for consistency */
+    height: 80px;           
     border-radius: 50%;      /* Circular image */
     border: 3px solid beige; /* Highlight with gold */
     transition: transform 0.3s ease;
     padding:20px;
+    margin-bottom: 15px;
     margin-left:10px;
 }
 
@@ -1334,7 +1340,10 @@ p {
     justify-content: center;
   }
   .movie-section {
-    margin-top: 0px;            /* Avoid collapsing margin if both have top margins */
+    margin-top:0;
+    display: flex;    
+    position:relative;
+    flex-direction: row;       /* Avoid collapsing margin if both have top margins */
   }
  
   /* Responsive Design */
@@ -1473,27 +1482,25 @@ p {
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
   }
   .movie-scroll-wrapper {
-    position: relative;         /* Make sure it's not fixed */
-  z-index: 1;                 /* Lower priority than other overlapping items */
-  margin-bottom: 40px;        /* Add spacing below */
-  margin-top: 60px;           /* Already present */
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.movie-scroll-container {
+    position: relative;
+    z-index: 1;
+    margin: 60px 0 40px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-direction: column;
+  }
+  .movie-scroll-container {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     gap: 20px;
     padding: 10px;
     scrollbar-width: none; /* Firefox */
-   
-}
-.movie-scroll-container::-webkit-scrollbar {
+  }
+  .movie-scroll-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
-}
-
+  }
 .movie-card {
     flex: 0 0 250px;
     background-color: #1a1a1a;
@@ -1549,22 +1556,45 @@ p {
 .movie-card:hover img {
     opacity: 0.6;
 }
-
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #000000aa;
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 2;
-    border-radius: 50%;
-    transition: background 0.3s ease;
+.movie-scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  padding: 10px;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
 
+.movie-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* hides scrollbar for cleaner mobile view */
+}
+
+.movie-scroll-wrapper .scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000000aa;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.movie-scroll-wrapper .scroll-btn:hover {
+  background-color: #333;
+}
+
+.movie-scroll-wrapper .scroll-btn.left {
+  left: 5px;
+}
+
+.movie-scroll-wrapper .scroll-btn.right {
+  right: 5px;
+}
 .scroll-btn:hover {
     background-color: #333;
 }
