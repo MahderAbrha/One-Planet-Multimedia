@@ -4,37 +4,11 @@
     margin: 0;
     padding: 0;
 }
-body {
-    background-color: black;
-    color:white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%; /* Full viewport width */
-    overflow-x: hidden;
-}
-.video-background {
-    position: absolute;
-    height: 500px; /* Set desired height */
-    overflow: hidden ;
-    top: 0;
-    left: 0;
-    width: auto;
-    min-height: 100vh;
-    z-index: -1;
-}
-
-.video-background video {
-    width: 100%; 
-    height: 100vh;
-    object-fit: cover; /* Ensures video scales properly */
-}
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 10px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -45,9 +19,10 @@ body {
 }
 .header-content {
     display: flex;
-    justify-content: space-between; /* Push logo left, menu icon right */
+    /* Push logo left, menu icon right */
     align-items: center;
     padding: 10px 20px;
+    justify-content: space-between;
   }
   
   .logo {
@@ -57,6 +32,7 @@ body {
   
   .logo img {
     z-index:1002;
+    max-width: 100%;
     height: 50px;
     width: auto; /* Ensures aspect ratio is maintained */
     border-radius: 0;
@@ -143,15 +119,25 @@ nav ul li {
 #nav-links a:hover {
     color: #ffcc00;
 }
+body {
+    background-color: black;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100vw; /* Full viewport width */
+    overflow-x: hidden;
+
+}
 .content {
     position: relative;
     z-index: 1; /* Ensures content appears above the video */
     text-align: center;
     padding: 80px 20px 20px;
-    padding-top: 50px;
+    padding-top: 40px;
     box-sizing: border-box;
     min-height: calc(100vh - 50px);
-    width:100%;
+    width:100vw;
     right:0;
     top:0;
     flex-wrap: wrap;
@@ -159,6 +145,21 @@ nav ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.video-background {
+    position: absolute;
+    height: 500px; /* Set desired height */
+    overflow: hidden ;
+    top: 0;
+    left: 0;
+    width: auto;
+    min-height: 100vh;
+    z-index: -1;
+}
+.video-background video {
+    width: 100%; 
+    height: 100vh;
+    object-fit: cover; /* Ensures video scales properly */
 }
 .video-container {
     display: flex;        /* Enables Flexbox for side-by-side layout */
@@ -179,7 +180,6 @@ nav ul li {
     align-items: center; 
 
 }
-
 video {
     width: 100%;   /* Ensures full width */
     height: 100%;  /* Ensures full height */
@@ -208,14 +208,15 @@ video {
 }
 
 .welcome-section {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     gap:30px;
-    margin-top:30px;
+    margin-top:10px;
     flex-direction: column;
     padding: 20px;
     align-items: center;
+    
 }
 .welcome-section h2 {
     letter-spacing: 4px;
@@ -272,7 +273,7 @@ video {
     margin: 80px 60px; /* Space from other sections */
     z-index: 1;
     position:relative; 
-    width: 100%; /* Full viewport width */
+    width: 100vw; /* Full viewport width */
     height:auto;
     max-width: 1000px;
 }
@@ -351,6 +352,7 @@ video {
     margin: 10px 0;
     display:flex;
     justify-content:center;
+    flex-wrap: wrap;
     gap:80px;
     margin-top: 80px;
     margin-bottom: 0px;
@@ -395,7 +397,7 @@ video {
     align-items: center;
     width: 100%; /* Full width */
     height: 100%;
-    margin: 80px 10px;
+    margin: 100px 10px;
     gap:60px;
     
 } 
@@ -427,7 +429,7 @@ video {
 
 .service-content {
     width: 50%; /* Full width */
-    padding: 20px;
+    padding: 30px;
     display: flex;
     align-items: flex-start;
     text-align: left;
@@ -504,8 +506,9 @@ video {
             font-size: 30px;
             cursor: pointer;
             color: white;
+            margin-left:auto;
             padding:10px;
-
+            
         }
         
         .menu-icon:hover {
@@ -679,7 +682,9 @@ p a:hover {
     .menu-icon {
         display: block;
     }
-   
+    nav {
+        width:0%;
+    }
     #nav-links {
         display: none;
         flex-direction: column;
@@ -691,7 +696,7 @@ p a:hover {
         padding: 20px;
     }
 .logo img{
-    display:block;
+    height:60px;
 }
     #nav-links.show {
         display: flex;
@@ -706,19 +711,23 @@ p a:hover {
         padding-left: 20px;
         display: block;
       }
-      .about-us p,
-    .text-card p {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-
-    .service {
-        max-width: 100%;
-    }
-
-    .service-image {
-        height: 180px;
-    }
+      
+    
+}
+@media (max-width: 768px) {
+    
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+        margin-left:auto ;
+      
+}
+    .header-content {
+        padding: 5px 10px;
+      }
+   
 
     .home h2 {
         font-size: 1.8rem;
@@ -728,8 +737,38 @@ p a:hover {
         font-size: 1.4rem;
         margin-top: 80px;
     }
+    .about-us{
+     justify-content: center;
+     align-items:center;
+     flex-wrap: wrap;
+     max-width: 1000px;
+    }
+.about-us h2::after {
+    content: "";
+    display: block;
+    position:flex;
+    width:100%;
+    background-color: white; /* Yellow underline */
+    border-radius: 2px;
+    align-items: center;
+    border: none;
+    height: 2px;
+    background-color: #fff; /* Full-width white line */
+    margin: 20px 10px; 
 }
-@media (max-width: 768px) {
+    .about-us p,
+    .text-card p {
+        font-size: 1rem;
+        padding: 0 10px;
+        width:100vw;
+    }
+
+    .service {
+        max-width:100%;
+    }
+.service-image{
+    height:100vh;
+}
     .timeline-block {
       flex-direction: column !important;
     }
@@ -741,21 +780,26 @@ p a:hover {
     #mash-bio h2 {
       font-size: 2rem;
     }
+    .custom-layout,
     .welcome-section {
-        flex-direction: column;
-        text-align:center;
-        flex-wrap: wrap;
-      }
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
   .welcome-section h2{
    color: #4891fefd;
    }
       .certificate-gallery {
           justify-content: center;
         }
-      
-        .movie-card {
-          max-width: 100%;
-        }
+       
+          
+        
+        
+          .movie-card {
+            max-width: 90%;
+          }
+          
       .slider-track img {
           height: 120px;
         }
@@ -787,6 +831,7 @@ p a:hover {
     
       .text-card {
         padding: 20px;
+        max-width: 100%;
       }
     
       #our-team {
@@ -794,16 +839,17 @@ p a:hover {
         padding:20px;
       }
       .video-text-section {
-        flex-direction: column;
+        flex-wrap: wrap;
+        max-width:100%;
         align-items: center;
-        padding: 10px;
+        padding: 20px;
       }
     
-      .video-screen {
-        width: 100%;
-        max-width: none;
-        height: auto;
-      }
+      .text-side,
+  .video-screen {
+    width: 100%;
+    max-width: 100%;
+  }
   }
 .movie-container, .about-container {
     display: flex;
@@ -1000,7 +1046,7 @@ p {
   /* Description Box */
   /* Container holding both video and text */
   .video-text-section {
-    display: fixed;
+    display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -1120,7 +1166,8 @@ p {
     width:100%;
     max-width: 1300px;
     text-align: center;
-
+    flex-wrap: wrap;
+    height:100%;
   }
  
   .text-card p {
@@ -1128,6 +1175,8 @@ p {
     color: black; /* lighter color for contrast against black background */
     line-height: 1.6;
     height:100%;
+    width:100%;
+    justify-content: center;
   }
   
  
@@ -1137,10 +1186,11 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     padding: 2rem;
-    gap: 2rem;
+    gap: 10px;
     margin-top:0px;
+    max-width: 100%;
+    width:100vw;
   }
   
   /* Left Side Text Styling */
@@ -1258,6 +1308,8 @@ p {
     object-fit: cover;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
+    max-width:100%;
+
   }
   
   .certificate-gallery img:hover {
@@ -1267,10 +1319,9 @@ p {
   .movie-scroll-wrapper {
     position: relative;
     width: 90%;
-    max-width: 100%;
+    max-width: 800px;
     margin: auto;
-    flex-direction: wrap;
-    justify-content: center;
+    flex-wrap: wrap;
     overflow: hidden;
 }
 
@@ -1300,6 +1351,7 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     width: 1200px;
+  
 }
 
 .movie-card img {
