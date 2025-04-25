@@ -538,178 +538,7 @@ video {
             transform: scale(1.1);
         }
     /* Media query for two items per row on wider screens */
-@media  (min-width: 900px) {
-        .services-container {
-            grid-template-columns: repeat(2, 1fr); /* Displays 2 services per row */
-        }
-       
-          .movie-section {
-            flex-direction: row;
-          }
-        
-          .text-side,
-          .video-screen {
-            width: 100%;
-           
-          }
-        
-    }
- 
-@media (max-width: 480px) {
-            .sister-Company {
-                width: 20%;  /* Bigger size for very small screens */
-                max-width: 120px;
-                margin-bottom: 10px;
-            }
-            .about-section {
-    padding: 30px 40px;
-    text-align: center;
-    background-color:black;
-    margin-top: 0;
-    z-index:1;
-            }
-            .about-container {
-    display: flex;
-    justify-content: center; /* Centers cards horizontally */
-    gap: 100px; /* Adds space between cards */
-    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
-    padding: 50px; /* Adds padding around the container */
-    
-             }
 
-            .about-container .card {
-    background: black; /* Dark background for contrast */
-    padding: 20px;
-    gap:30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); /* Gold shadow for elegance */
-    text-align: center; /* Centers text and image */
-    width: 300px; /* Sets a fixed width for the cards */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
-    justify-content: space-between;
-             }
-
-            .about-container .card img {
-    width: 150px;
-    height: 150px; /* Ensures square shape */
-    border-radius: 50%; /* Makes the image circular */
-    border: 4px solid #FFD700; /* Gold border for a premium feel */
-    object-fit: cover; /* Ensures the image scales correctly without distortion */
-    transition: transform 0.3s ease; /* Smooth image zoom on hover */
-             }
-
-            .about-container .card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5); /* Enhanced shadow on hover */
-    cursor: pointer; /* Shows pointer cursor */
-             }       
-
-             .about-container .card h4 {
-    font-weight: bold;
-    color: #FFD700; /* Gold color for the name */
-    font-size: 1.3rem;
-    margin: 10px 0 5px; /* Space between name and position */
-             }
-
-            .about-container .card p {
-    font-size: 1rem;
-    font-weight: normal;
-    color: whitesmoke; /* White text for contrast */
-    margin-bottom: 15px;
-             }
-
-             .about-container .card .position {
-    font-size: 0.9rem;
-    color: #bbb; /* Light gray color for position */
-    font-style: italic;
-              }
-             p a {
-              color: #FFD700;         /* Changes link text to yellow */
-              text-decoration: none; /* Optional: Removes underline */
-              font-weight: bold;     /* Optional: Makes the text bolder */
-              padding:20px;
-               }
-
-             p a:hover {
-    color: blue;       /* Optional: Slightly brighter yellow on hover */
-    text-decoration: underline; /* Adds underline on hover for better UX */
-               }
-@media (max-width: 768px) {
-     
-        .menu-icon {
-            display: block; /* Ensure visibility in mobile view */
-        }
-        .about-us p {
-            margin-top: 20px; /* Reduces excessive spacing */
-        }
-        #nav-links {
-            display: none;
-            flex-direction: column;
-            background-color: gray;
-            width: 100%;
-            text-align: center;
-            position: fixed;
-            top: 60px;
-            right: 0;
-        }
-    
-        #nav-links.show {
-            display: flex;
-            flex-direction: column;
-        }
-    
-        nav.hidden {
-            display: none; /* Ensures nav stays hidden when scrolled */
-        }
-        .submenu {
-            display: none; /* Hidden by default */
-            background-color: #222;
-            padding: 10px 0;
-        }
-    
-        .submenu.visible {
-            display: block; /* Show submenu when toggled */
-        }
-        .content-wrapper {
-            flex-direction: column; /* Stack content vertically on smaller screens */
-            text-align: center;
-        }
-    
-        .sister-Company {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 15px;
-        }
-    }
-      .welcome-section {
-        padding: 300px 200px;
-    }
-
-    .service h3 {
-        font-size: 1.2rem;
-    }
-
-    .service p {
-        font-size: 0.8rem;
-    }
-    .about-container .card img {
-        width: 120px;
-    }
-
-    .about-section {
-        padding: 20px 10px;
-    }
-    .services-container {
-        grid-template-columns: 1fr;
-        max-width: 2000px;
-        width:100%;
-    }
-
-    .services-container .service {
-        margin-bottom: 20px;
-    }
-    
-}
 @media screen and (max-width: 900px) {
   nav {
     display: flex;
@@ -1065,19 +894,22 @@ display: flex;
   height:100%;
 }
 .content-wrapper {
-  flex-direction: column;
-    text-align:  center;     /* Center items vertically */
-    gap: 20px;               /* Adds spacing between image and text */
+    align-items: center;    /* Center items vertically */
+    gap: 30px;
+    display:flex;
+    flex-wrap: wrap;  
+    width:100%;             /* Adds spacing between image and text */
 }
 
 .sister-Company {
-    width: 80%;            /* Fixed size for consistency */
-    height: 80px;           
+    width: 50%;            /* Fixed size for consistency */
+    height: 550%;           
     border-radius: 50%;      /* Circular image */
     border: 3px solid beige; /* Highlight with gold */
     transition: transform 0.3s ease;
     padding:20px;
     margin-bottom: 15px;
+    object-fit: cover;
     margin-left:10px;
 }
 
@@ -1311,22 +1143,19 @@ p {
   }  
   /* Text card styling as requested */
   .text-card {
-    flex: 1 1 500px;
     background-color: beige;
     border-left: 5px solid #222;
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    margin-left: 0px;
-    margin-top: 0px;
-    justify-content: center;
-    align-items: center;
-    height:100%;
-    width:100%;
     max-width: 1300px;
-    text-align: center;
-    flex-wrap: wrap;
-    height:100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* for responsiveness */
+    gap: 20px;
+    text-align: left;
   }
  
   .text-card p {
@@ -1334,7 +1163,7 @@ p {
     color: black; /* lighter color for contrast against black background */
     line-height: 1.6;
     height:100%;
-    width:100%;
+    width:50%;
     justify-content: center;
   }
   .movie-section {
