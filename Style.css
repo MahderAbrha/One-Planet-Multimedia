@@ -760,12 +760,7 @@ max-height: 100vh;
         max-width: 100%;
       }
     
-      .text-card {
-        padding: 20px;
-        max-width: 100%;
-        width:100vw;
-      }
-    
+      
       #our-team {
         font-size: 2rem;
         padding: 20px;
@@ -799,7 +794,10 @@ max-height: 100vh;
         height: auto;
         /* Important for layout calculations */
       }
-      
+      .sister-Company{
+        width:50%;
+        height:50%;
+      }
         .text-side,
 .video-screen {
   width: 100vw;
