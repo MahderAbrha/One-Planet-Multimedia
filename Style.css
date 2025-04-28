@@ -614,8 +614,6 @@ video {
           .text-card{
             flex-wrap: wrap;
             width:100%;
-            max-width: 100%;
-            height:auto;
             align-items: center;
             justify-content: center;
           }
@@ -641,7 +639,6 @@ video {
         }
       .services-content{
           padding: 20px;
-          
           width:100%;
           display: flex;           /* Align image and text side by side */
           align-items: center; 
@@ -659,7 +656,7 @@ video {
        }
           .service-image {
             display:flex;
-            width:50%;
+            width:100%;
           }
         
           .timeline-block {
@@ -1130,6 +1127,7 @@ p {
     flex-wrap: wrap; /* for responsiveness */
     gap: 20px;
     text-align: left;
+    height: 100%;
   }
  
   .text-card p {
